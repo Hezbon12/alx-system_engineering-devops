@@ -1,2 +1,2 @@
 Command line for the win
-![0-first_9_tasks](https://user-images.githubusercontent.com/85166066/137539895-7daa9d5a-1fa2-442f-aa23-632d743e6ab4.png)
+
