@@ -1,31 +1,35 @@
 #!/usr/bin/env bash
-# This script Starts/Stops/Restarts manage_my_process script
+# Write a script that manages the manage_my_process process:
+# If "start" argument passed:
+## Starts
 
-argv1=$1
-tmpfile="/var/run/my_process.pid"
-
-startLoop_n_createFile()
-{
+start_p() {
     ./manage_my_process &
-    echo "$!" > "$tmpfile"
+    echo $$ > /var/run/my_process.pid
 }
-killLoop_n_rmFile()
-{
-    #kill "$(cat "$tmpfile")"
-    sudo pkill -f "./manage_my_process"
-    rm "$tmpfile"
+
+stop_p() {
+    rm /var/run/my_process.pid
+    pkill -of manage_my_process
 }
-case "$argv1" in
-    start) echo "manage_my_process started"
-	startLoop_n_createFile
-	;;
-    stop) echo "manage_my_process stopped"
-	killLoop_n_rmFile
-	;;
-    restart) echo "manage_my_process restarted"
-	killLoop_n_rmFile
-	startLoop_n_createFile
-	;;
-    *) echo "Usage: manage_my_process {start|stop|restart}"
-	;;
-esac
+
+has_arg_1() {
+    if [ "$CMD" == "start" ]; then
+	start_p
+	echo "manage_my_process started"
+    elif [ "$CMD" == "stop" ]; then
+	stop_p
+	echo "manage_my_process stopped"
+    elif [ "$CMD" == "restart" ]; then
+	stop_p
+	start_p
+	echo "manage_my_process restarted"
+    fi
+}
+
+if [ $# -gt 0 ]; then
+    CMD="$1"
+    has_arg_1
+else
+    echo "Usage: manage_your_process {start|stop|restart}"
+fi
