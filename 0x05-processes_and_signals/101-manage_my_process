@@ -5,11 +5,12 @@
 
 start_p() {
     ./manage_my_process &
-    echo $$ > /var/run/my_process.pid
+    echo $$ > /var/run/myscript.pid
+
 }
 
 stop_p() {
-    rm /var/run/my_process.pid
+    rm /var/run/myscript.pid
     pkill -of manage_my_process
 }
 
