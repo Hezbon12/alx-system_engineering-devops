@@ -1,0 +1,41 @@
+Hit:1 https://download.docker.com/linux/ubuntu focal InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1469 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1135 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [205 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [9108 B]
+Get:10 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [643 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [91.7 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [675 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [291 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [14.7 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [694 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [99.0 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [892 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [196 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [19.9 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [19.5 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [13.4 kB]
+Get:22 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [672 B]
+Get:23 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [115 kB]
+Get:24 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [13.0 kB]
+Fetched 6932 kB in 20s (351 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.18.0-0ubuntu1.2).
+The following packages were automatically installed and are no longer required:
+  bridge-utils dns-root-data dnsmasq-base libidn11 ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 93 not upgraded.
+WARN: initcaps
+[Errno 2] iptables v1.8.4 (legacy): can't initialize iptables table `filter': Table does not exist (do you need to insmod?)
+Perhaps iptables or your kernel needs to be upgraded.
+
+Skipping adding existing rule
+ * Starting nginx nginx
+   ...done.
