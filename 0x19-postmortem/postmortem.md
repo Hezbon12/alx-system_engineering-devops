@@ -1,5 +1,5 @@
 # MY FIRST POSTMORTEM
-* * *
+***
 # An Outage Experience I Had
 ***
 From 6PM to 7PM GMT, requests to our servers from all sources were receiving 403 errors. About 78% of our subscribers were trying to access our content but were denied access. This was as a result of an outbreak on the firewall on the load balancer
