@@ -20,5 +20,5 @@ From 6PM to 7PM GMT, requests to our servers from all sources were receiving 403
 # h1 Corrective and preventative measures
 ***
 The following measures will be put in place to make sure the same thing never repeats itself:
-*The firewall configuration files’ content will always be simple and clear.
-*Burden on the firewall will be reduced by regularly removing unwanted traffic on the firewall.
+* The firewall configuration files’ content will always be simple and clear.
+* Burden on the firewall will be reduced by regularly removing unwanted traffic on the firewall.
