@@ -1,9 +1,9 @@
-# h1 MY FIRST POSTMORTEM
+# MY FIRST POSTMORTEM
 ***
-# h1 An Outage Experience I Had
+# An Outage Experience I Had
 ***
 From 6PM to 7PM GMT, requests to our servers from all sources were receiving 403 errors. About 78% of our subscribers were trying to access our content but were denied access. This was as a result of an outbreak on the firewall on the load balancer
-# h2 Timeline (All in Greenwich Mean Time)
+# Timeline (All in Greenwich Mean Time)
 ***
 5:30 PM – Our load balancer was being tuned.
 5:50 PM – We received a complaint from the on-call management system that our site is not responding.
@@ -13,11 +13,11 @@ From 6PM to 7PM GMT, requests to our servers from all sources were receiving 403
 6:30 PM – The engineers found out the issue was with the firewall.
 6:45 PM – Firewall traffic was cleaned up and unused rules were removed from the firewall to prevent accidents.
 7 PM – The issue was completely resolved and the site was up and running.
-# h2 Root cause and resolution
+# Root cause and resolution
 ***
 **CAUSE:** The load balancer was tuned and the firewall configuration was unconsciously affected. This caused a block on all ports except port 22. 
 **RESOLUTION:** The issue was found out and firewall was configured to allow required ports.
-# h1 Corrective and preventative measures
+# Corrective and preventative measures
 ***
 The following measures will be put in place to make sure the same thing never repeats itself:
 * The firewall configuration files’ content will always be simple and clear.
